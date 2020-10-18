@@ -8,3 +8,12 @@
             {{/unless}}
         {{/each}}
     </ul>
+
+<h2>Burgers that have been devoured</h2>
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                <li>{{burger_name}}</li>
+            {{/if}}
+        {{/each}}
+    </ul>
