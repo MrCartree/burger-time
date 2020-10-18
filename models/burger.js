@@ -6,6 +6,11 @@ let burger = {
             cb(res);
         });
     },
+    update: function(objCol, condition, cb) {
+        orm.updateOne("burgers", objCol, condition, function(res) {
+            cb(res);
+        });
+    },
 }
 
 module.exports = burger;
