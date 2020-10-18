@@ -4,7 +4,7 @@
     <ul>
         {{#each burgers}}
             {{#unless devoured}}
-                <li>{{burger_name}}</li>
+                <li>{{burger_name}} <button class="tbDevoured" data-id="{{id}}" data-burger="{{devoured}}">DEVOUR</button></li>
             {{/unless}}
         {{/each}}
     </ul>
@@ -13,7 +13,7 @@
     <ul>
         {{#each burgers}}
             {{#if devoured}}
-                <li>{{burger_name}}</li>
+                <li>{{burger_name}} <button class="tbUnDevoured" data-id="{{id}}">UP CHUCK</button></li>
             {{/if}}
         {{/each}}
     </ul>
