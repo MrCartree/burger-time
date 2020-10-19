@@ -1,0 +1,13 @@
+#bgtLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+.form-cont {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

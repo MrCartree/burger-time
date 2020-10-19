@@ -1,31 +1,39 @@
-<h1>Burger Time!</h1>
-
-<h2>Burgers that have not been devoured</h2>
-    <ul>
-        {{#each burgers}}
-            {{#unless devoured}}
-                <li>{{burger_name}} <button class="tbDevoured" data-id="{{id}}" data-burger="{{devoured}}">DEVOUR</button></li>
-            {{/unless}}
-        {{/each}}
-    </ul>
-
-<h2>Burgers that have been devoured</h2>
-    <ul>
-        {{#each burgers}}
-            {{#if devoured}}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Burgers that have not been devoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>{{burger_name}} <button class="tbDevoured" data-id="{{id}}"
+                        data-burger="{{devoured}}">DEVOUR</button></li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h2>Burgers that have been devoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
                 <li>{{burger_name}}</li>
-            {{/if}}
-        {{/each}}
-    </ul>
-
-
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="new-burger">Burger Name:</label>
-        <input type="text" id="new-Burger" name="name" placeholder="Enter new burger here">
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
+</div>
 
-    <button type="submit">WELCOME TO FLAVOR TOWN</button>
 
-</form>
+<div class="form-cont">
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="new-burger">Burger Name:</label>
+            <input type="text" id="new-Burger" name="name" placeholder="Enter new burger here">
+        </div>
+
+        <button type="submit">WELCOME TO FLAVOR TOWN</button>
+
+    </form>
+</div>
