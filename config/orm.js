@@ -1,6 +1,5 @@
 const connection = require("./connection")
 
-// Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
     var arr = [];
   
@@ -65,7 +64,6 @@ let orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;

@@ -7,14 +7,11 @@ $(function() {
         devoured: burger
       };
   
-      // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: devoured
       }).then(
         function() {
-          console.log("changed devoured to", burger);
-          // Reload the page to get the updated list
           location.reload();
         }
       );
@@ -32,17 +29,9 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
-
           location.reload();
         }
       );
     });
-
-
-
-
-
-
 
 });
