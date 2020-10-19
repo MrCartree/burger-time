@@ -20,6 +20,15 @@ function objToSql(ob) {
     return arr.toString();
   }
 
+  function printQuestionMarks(num) {
+    var arr = [];
+  
+    for (var i = 0; i < num; i++) {
+      arr.push("?");
+    }
+  
+    return arr.toString();
+  }
 
 let orm = {
     selectAll: function(table, cb){
@@ -30,8 +39,22 @@ let orm = {
         });
     },
     
-    insertOne() {
-        console.log("This is the insert one function!")
+    insertOne: function(table, cols, vals, cb) {
+      let queryString = "INSERT INTO " + table;
+
+      queryString += " (";
+      queryString += cols.toString();
+      queryString += ") ";
+      queryString += "VALUES (";
+      queryString += printQuestionMarks(vals.length);
+      queryString += ") ";
+
+      connection.query(queryString, vals, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
     },
     
     updateOne: function(table, objCol, condition, cb) {
