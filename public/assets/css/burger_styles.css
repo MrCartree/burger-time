@@ -6,8 +6,16 @@
     width: 50%;
 }
 
-.form-cont {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
+.burgers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
