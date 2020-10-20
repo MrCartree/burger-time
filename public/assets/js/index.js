@@ -1,3 +1,15 @@
+function submitBurger(path, type, data) {
+  $.ajax(path, {
+    type,
+    data,
+  }).then(
+    function() {
+      location.reload();
+    }
+  );
+};
+
+
 $(function() {
     $(".tbDevoured").on("click", function(event) {
       var id = $(this).data("id");
@@ -7,14 +19,7 @@ $(function() {
         devoured: burger
       };
   
-      $.ajax("/api/burgers/" + id, {
-        type: "PUT",
-        data: devoured
-      }).then(
-        function() {
-          location.reload();
-        }
-      );
+      submitBurger(`/api/burgers/${id}`, "PUT", devoured)
     });
 
     $(".create-form").on("submit", function(event) {
@@ -24,14 +29,7 @@ $(function() {
         name: $("#new-Burger").val().trim(),
       };
 
-      $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-      }).then(
-        function() {
-          location.reload();
-        }
-      );
+      submitBurger("/api/burgers", "POST", newBurger);
     });
 
     $(".tbPuke").on("click", function(event) {
@@ -42,14 +40,7 @@ $(function() {
         devoured: burger
       };
   
-      $.ajax("/api/burgers/" + id, {
-        type: "DELETE",
-        data: devoured
-      }).then(
-        function() {
-          location.reload();
-        }
-      );
+      submitBurger(`/api/burgers/${id}`, "DELETE", devoured);
     });
 
 });
