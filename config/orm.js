@@ -1,11 +1,11 @@
 const connection = require("./connection")
 
 function objToSql(ob) {
-    var arr = [];
+    let arr = [];
   
 
-    for (var key in ob) {
-      var value = ob[key];
+    for (let key in ob) {
+      let value = ob[key];
 
       if (Object.hasOwnProperty.call(ob, key)) {
 
@@ -20,9 +20,9 @@ function objToSql(ob) {
   }
 
   function printQuestionMarks(num) {
-    var arr = [];
+    let arr = [];
   
-    for (var i = 0; i < num; i++) {
+    for (let i = 0; i < num; i++) {
       arr.push("?");
     }
   

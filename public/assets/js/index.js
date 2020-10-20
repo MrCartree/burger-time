@@ -13,10 +13,10 @@ function submitBurger(path, type, data) {
 $(function() {
     $(".tbDevoured").on("click", function(event) {
       console.log("fuck you");
-      var id = $(this).data("id");
-      var burger = $(this).data("burger");
+      let id = $(this).data("id");
+      let burger = $(this).data("burger");
   
-      var devoured = {
+      let devoured = {
         devoured: burger
       };
   
@@ -26,7 +26,7 @@ $(function() {
     $(".create-form").on("submit", function(event) {
 
       event.preventDefault();
-      var newBurger = {
+      let newBurger = {
         name: $("#new-Burger").val().trim(),
       };
 
@@ -34,10 +34,10 @@ $(function() {
     });
 
     $(".tbPuke").on("click", function(event) {
-      var id = $(this).data("id");
-      var burger = $(this).data("burger");
+      let id = $(this).data("id");
+      let burger = $(this).data("burger");
   
-      var devoured = {
+      let devoured = {
         devoured: burger
       };
   
