@@ -1,5 +1,6 @@
 body {
     background-color:  #f6b119;
+    font-family: "Press Start 2P", cursive;
 }
 
 #bgtLogo {
@@ -17,12 +18,42 @@ body {
     justify-content: space-evenly;
 }
 
+.peter-pepper {
+    width: 100%;
+}
+
+.burger-list {
+    font-size: large;
+}
+
+.button {
+    background-color: #1a9a45; /* Green */
+    border: none;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
 .form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
     margin-bottom: 75px;
+}
+
+
+.input {
+    border: none;
+    border-bottom: 2px solid #e5170a;
+    background-color: #f6b119;
+    font-size: large;
 }
 
 .bottom-image {
@@ -32,5 +63,5 @@ body {
 }
 
 .actual-b-image {
-    height: 250px;
+    width: 25%;
 }
