@@ -1,3 +1,7 @@
+body {
+    background-color:  #f6b119;
+}
+
 #bgtLogo {
     display: block;
     margin-left: auto;
@@ -18,4 +22,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 75px;
+}
+
+.bottom-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actual-b-image {
+    height: 250px;
 }

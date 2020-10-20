@@ -1,5 +1,8 @@
 <div class="burgers">
     <div>
+        <img src="../public/assets/img/BurgerTimeDudeNoBG L.png" alt="Peter Pepper">
+    </div>
+    <div class="left-side">
         <h2>Burgers that have not been devoured</h2>
         <ul>
             {{#each burgers}}
@@ -10,7 +13,7 @@
             {{/each}}
         </ul>
     </div>
-    <div>
+    <div class="right-side">
         <h2>Burgers that have been devoured</h2>
         <ul>
             {{#each burgers}}
@@ -19,6 +22,9 @@
             {{/if}}
             {{/each}}
         </ul>
+    </div>
+    <div>
+        <img src="../public/assets/img/BurgerTimeDudeNoBG R.png" alt="Peter Pepper">
     </div>
 </div>
 
@@ -30,4 +36,8 @@
         </div>
         <button type="submit">WELCOME TO FLAVOR TOWN</button>
     </form>
+</div>
+
+<div class="bottom-image">
+    <img class="actual-b-image" src="../public/assets/img/AllThree.png" alt="Burger Time Characters">
 </div>
