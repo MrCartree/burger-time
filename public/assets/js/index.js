@@ -12,6 +12,7 @@ function submitBurger(path, type, data) {
 
 $(function() {
     $(".tbDevoured").on("click", function(event) {
+      console.log("fuck you");
       var id = $(this).data("id");
       var burger = $(this).data("burger");
   

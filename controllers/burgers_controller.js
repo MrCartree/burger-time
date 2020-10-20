@@ -28,6 +28,7 @@ router.put("/api/burgers/:id", function(req, res) {
     });
 });
 
+// I know this IS a delete route but it works all the same as a PUT route.. So I did it.. It doesnt delete at all but actually updates the burger info to move the burger from devoured to not devoured.
 router.delete("/api/burgers/:id", function(req, res) {
     let condition = "id = " + req.params.id;
     
